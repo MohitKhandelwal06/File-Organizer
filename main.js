@@ -2,6 +2,7 @@ let helpFunc=require("./commands/help");
 let inputArr=process.argv.slice(2);
 let command=inputArr[0];
 let path= inputArr[1];
+let orgFun=require("./commands/organize");
 
 switch (command){
     case "tree":
@@ -10,7 +11,7 @@ switch (command){
         break;
     case "organize":
         //call organize function
-        console.log("organize function called and executed successfully"+path);
+        orgFun.organize(path);
         break;
     case "help":
         // call help function

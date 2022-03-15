@@ -77,6 +77,7 @@ function getFolderName(ext){
         }
         // console.log(key);
     }
+    return "miscellaneous";
 }
 
 function copyFileToDest(srcPath, fullPathOfFile,folderName){
@@ -94,4 +95,6 @@ let destFileName=path.join(destFolderPath,fileName);
 fs.copyFileSync(fullPathOfFile,destFileName);
 
 }
-organize();
+module.exports={
+    organize:organize
+}
