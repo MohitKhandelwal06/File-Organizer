@@ -3,11 +3,12 @@ let inputArr=process.argv.slice(2);
 let command=inputArr[0];
 let path= inputArr[1];
 let orgFun=require("./commands/organize");
+let tree =require("./commands/tree");
 
 switch (command){
     case "tree":
         // call tree function
-        console.log("tree function called and executed successfully"+path);
+        tree.tree(path);
         break;
     case "organize":
         //call organize function
